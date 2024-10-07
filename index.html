@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashmeet Kaur - Portfolio</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Poppins', sans-serif;
+        }
+        a {
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #00bfa5; /* Teal Accent */
+        }
+        .btn {
+            background-color: #00bfa5; /* Teal Accent */
+            color: #121212;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #009e8f;
+            transform: translateY(-2px);
+        }
+        .section-title {
+            border-bottom: 2px solid #00bfa5;
+            display: inline-block;
+            padding-bottom: 0.25rem;
+            margin-bottom: 1rem;
+        }
+        /* Hero Section Enhancements */
+        .hero-bg {
+            background: linear-gradient(135deg, #1f1f1f, #2c2c2c);
+            position: relative;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(18, 18, 18, 0.7); /* Semi-transparent overlay */
+            z-index: 0;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 10;
+        }
+        /* Responsive Navigation for Mobile */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                display: none;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+                cursor: pointer;
+                color: #e0e0e0;
+            }
+        }
+        @media (min-width: 769px) {
+            .menu-toggle {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans leading-normal tracking-normal">
+    <!-- Header -->
+    <header class="bg-gray-900 shadow fixed w-full z-10">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <h1 class="text-2xl font-bold text-white">Ashmeet Kaur</h1>
+            <nav>
+                <span class="menu-toggle text-2xl md:hidden">
+                    &#9776;
+                </span>
+                <ul class="flex space-x-6 md:space-x-10">
+                    <li><a href="#about" class="text-gray-300 hover:text-white">About</a></li>
+                    <li><a href="#education" class="text-gray-300 hover:text-white">Education</a></li>
+                    <li><a href="#projects" class="text-gray-300 hover:text-white">Projects</a></li>
+                    <li><a href="#skills" class="text-gray-300 hover:text-white">Skills</a></li>
+                    <li><a href="#experience" class="text-gray-300 hover:text-white">Experience</a></li>
+                    <li><a href="#achievements" class="text-gray-300 hover:text-white">Achievements</a></li>
+                    <li><a href="#languages" class="text-gray-300 hover:text-white">Languages</a></li>
+                    <li><a href="#contact" class="text-gray-300 hover:text-white">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="h-screen flex items-center justify-center hero-bg" data-aos="fade-in">
+        <div class="hero-overlay"></div> <!-- Overlay for better text visibility -->
+        <div class="hero-content text-center p-6">
+            <h2 class="text-4xl md:text-6xl font-bold text-white">Hi, I'm Ashmeet Kaur</h2>
+            <p class="mt-4 text-lg md:text-2xl text-gray-300">Computer Science Student | UI/UX Designer | Developer</p>
+            <div class="mt-6">
+                <a href="#projects" class="btn inline-block">View My Work</a>
+            </div>
+            <!-- Optional: Add a profile image or graphic -->
+            <!-- <img src="your-profile-image.jpg" alt="Ashmeet Kaur" class="w-32 h-32 rounded-full mt-8 mx-auto"> -->
+        </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="container mx-auto p-6 mt-20" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold section-title">About Me</h2>
+        <div class="flex flex-col md:flex-row items-center">
+            <img src="https://via.placeholder.com/150" alt="Profile Picture" class="w-40 h-40 rounded-full mb-4 md:mb-0 md:mr-6">
+            <div>
+                <p>I am a Computer Science student at Thapar Institute of Engineering and Technology with a passion for UI/UX design, programming, and research. I have contributed to various projects and taught students, showcasing leadership and problem-solving skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="container mx-auto p-6" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold section-title">Education</h2>
+        <div class="space-y-4">
+            <div>
+                <h3 class="text-2xl font-bold text-purple-400">Thapar Institute of Engineering and Technology</h3>
+                <p class="text-gray-400">Patiala, India</p>
+                <p>Bachelor of Science in Computer Science | Sept 2022 – May 2026</p>
+                <p>CGPA: 9.79</p>
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-purple-400">Bhai Mastaan Singh Public School</h3>
+                <p class="text-gray-400">Sri Muktsar Sahib, India</p>
+                <p>Class 12: Central Board of Secondary Education | 2021 – Feb 2022</p>
+                <p>Grades: 98.6%</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="container mx-auto p-6 bg-gray-800" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold section-title text-white">Projects</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <!-- Project 1 -->
+            <div class="bg-gray-700 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <h3 class="text-2xl font-bold text-teal-400">Tech Fest SATURNALIA App</h3>
+                <p class="mt-2">Designed wireframes and created interactive prototypes using Figma for the Saturnalia app, enhancing user interfaces and ensuring seamless navigation.</p>
+            </div>
+            <!-- Project 2 -->
+            <div class="bg-gray-700 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <h3 class="text-2xl font-bold text-teal-400">Duolingo App Enhancement</h3>
+                <p class="mt-2">Conducted user research and developed a comprehensive UX case study to enhance Duolingo's user experience. <a href="https://www.behance.net/gallery/200069821/Duolingo-UX-Case-study" class="text-black-100 underline">View Case Study</a></p>
+            </div>
+            <!-- Project 3 -->
+            <div class="bg-gray-700 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <h3 class="text-2xl font-bold text-teal-400">Video-Books Platform</h3>
+                <p class="mt-2">Developed a multimedia storytelling platform using HTML, CSS, JavaScript, Firebase, and Flask integrated with Hugging Face API for video generation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section id="skills" class="container mx-auto p-6" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold section-title">Technical Skills</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div>
+                <h3 class="text-2xl font-bold text-teal-400">Programming Languages</h3>
+                <p>HTML, CSS, JavaScript, C, C++, Python</p>
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-teal-400">Frameworks & Libraries</h3>
+                <p>Tailwind CSS, Node.js</p>
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-teal-400">Database Management</h3>
+                <p>Oracle, SQL Server</p>
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-teal-400">Development Tools</h3>
+                <p>VS Code, Matlab</p>
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-teal-400">UI/UX Design</h3>
+                <p>Figma, Photoshop</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="container mx-auto p-6 bg-gray-800" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold section-title text-white">Experience</h2>
+        <div class="space-y-4">
+            <div>
+                <h3 class="text-2xl font-bold text-teal-400">Project Director, Executive Board | ACM Thapar</h3>
+                <ul class="list-disc list-inside mt-2">
+                    <li>Taught Data Structures and Algorithms (DSA) to about 30 students and mentored various projects.</li>
+                    <li>Coordinated technical events and managed hackathons, ensuring successful outcomes.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" class="container mx-auto p-6" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold section-title">Achievements</h2>
+        <ul class="list-disc list-inside space-y-2">
+            <li>Earned an academic scholarship for exceptional academic performance.</li>
+            <li>Secured the top position district-wide for academic excellence during Class 12 examinations.</li>
+        </ul>
+    </section>
+
+    <!-- Languages -->
+    <section id="languages" class="container mx-auto p-6 bg-gray-800" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold section-title text-white">Languages</h2>
+        <p>English, Punjabi, Hindi, Urdu</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="container mx-auto p-6" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold section-title">Contact</h2>
+        <p>If you'd like to get in touch, feel free to reach out via email or connect with me on GitHub.</p>
+        <div class="mt-4">
+            <a href="mailto:ashmkaur01@gmail.com" class="btn">Email Me</a>
+            <a href="https://github.com/ashmkaur" class="btn ml-4" target="_blank">GitHub</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 p-4 text-center" data-aos="fade-up">
+        <p>&copy; 2024 Ashmeet Kaur. All rights reserved.</p>
+        <div class="mt-2 space-x-4">
+            <a href="https://github.com/ashmkaur" class="hover:text-white">GitHub</a>
+            <!-- Add more social links if needed -->
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
